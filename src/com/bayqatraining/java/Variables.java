@@ -57,21 +57,8 @@ public class Variables {
         int value1 = 56;
         int value2 = 42;
 
-        double resultOfDevision = (double)value1 / value2;
-        System.out.println("Devision " + resultOfDevision);
-
-        double remainder = (double)value1 % value2;
-        System.out.println("Remainder " + remainder);
-
-        double doubleValue = -3.99999;
-
-        double rounder = Math.round(doubleValue);
-        System.out.println(rounder);
-
-        double absoluteValue = Math.abs(doubleValue);
-        System.out.println(absoluteValue);
-
-        System.out.println(Math.random());
+//        TODO: divide value1/value2 and store result in double variable
+//        TODO: find a remainder
 
     }
 
