@@ -2,21 +2,15 @@ package com.bayqatraining.java;
 
 import java.math.BigDecimal;
 
+/**
+ * Created by idorovskikh on 8/18/16.
+ */
+
 public class Variables {
 
     private static boolean booleanDefault;
 
-    public static void main(String[] args) {
-	// write your code here
-
-        primitives();
-        checkForIntegerBounds(2147483647);
-        currencySum();
-        mathematicalOperations();
-        booleanExamples();
-    }
-
-    private static void primitives(){
+    public void commonPrimitives(){
         int numberOfStudents = 5;
         double exchangeRateUSD = .96;
         float f = 1.445454545f;
@@ -28,7 +22,7 @@ public class Variables {
         System.out.println("My long is  "  + l);
     }
 
-    private static void checkForIntegerBounds( int b) {
+    public void checkForIntegerBounds( int b) {
 
         if (b < Integer.MAX_VALUE) {
             b++;
@@ -37,8 +31,8 @@ public class Variables {
         System.out.println("Integer " + b);
     }
 
-//    very important for accounting testing
-    private static void currencySum() {
+    //    very important for accounting testing
+    public void currencySum() {
         double fee = .012;
         double total = fee + fee + fee;
         System.out.println("Total money " + total );
@@ -53,16 +47,22 @@ public class Variables {
         System.out.println(sum);
     }
 
-    private static void mathematicalOperations(){
+    public void mathematicalOperations(){
         int value1 = 56;
         int value2 = 42;
 
 //        TODO: divide value1/value2 and store result in double variable
 //        TODO: find a remainder
 
+        double resultOfDivision = (double) value1 / value2;
+        System.out.println("Division " + resultOfDivision);
+
+        double remainder = (double) value1 % value2;
+        System.out.println("Remainder " + remainder);
+
     }
 
-    private static void booleanExamples(){
+    public void booleanExamples(){
         boolean b1 = true;
         boolean b2 = false;
 
