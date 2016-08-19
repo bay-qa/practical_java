@@ -19,10 +19,8 @@ public class Bootstrap {
                 primitieves.booleanExamples();
                 break;
             case "Day2":
-                StringExamples newStrings = new StringExamples();
-                newStrings.findString();
+               new StringExamples();
                 break;
-
             default:
                 throw new IllegalArgumentException("Invalid class of : " + value);
         }
