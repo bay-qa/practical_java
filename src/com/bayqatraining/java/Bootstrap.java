@@ -21,6 +21,10 @@ public class Bootstrap {
             case "Day2":
                new StringExamples();
                 break;
+            case "Day3":
+                new MethodOverloading();
+                new DataCollections();
+                break;
             default:
                 throw new IllegalArgumentException("Invalid class of : " + value);
         }
