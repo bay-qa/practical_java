@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import pageobjects.Login;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * Created by idorovskikh on 8/25/16.
  */
@@ -25,6 +27,7 @@ public class TestLogin {
     @Test
     public void succeed(){
         login.with("tomsmith", "SuperSecretPassword!");
+        assertTrue("success message not present", login.successMessagePresent());
     }
 
     @After
