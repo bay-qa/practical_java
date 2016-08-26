@@ -78,4 +78,5 @@ public class Variables {
         System.out.println(parsedBoolean);
 
     }
+
 }

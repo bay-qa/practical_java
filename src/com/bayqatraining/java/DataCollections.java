@@ -62,8 +62,14 @@ class DataCollections {
 
 
     static void itirateArrayList(){
-        for (String item:list) {
-            System.out.println(item);
+//        for (String item:list) {
+//            System.out.println(item);
+//        }
+
+        int item = 0;
+        while(item < list.size()) {
+            System.out.println(list.get(item));
+            item ++;
         }
     }
 
