@@ -12,14 +12,12 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by idorovskikh on 8/29/16.
  */
-public class TestDynamicLoading {
+public class TestDynamicLoading extends TestBase {
 
-    private WebDriver driver;
     private DynamicLoading dynamicLoading;
 
     @Before
     public void setUp() {
-        driver = new FirefoxDriver();
         dynamicLoading = new DynamicLoading(driver);
     }
     @Test
@@ -35,10 +33,4 @@ public class TestDynamicLoading {
         assertTrue("finish text didn't render after loading",
                 dynamicLoading.finishTextPresent());
     }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
-
 }
