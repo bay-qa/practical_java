@@ -2,6 +2,9 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Base {
@@ -33,5 +36,17 @@ public class Base {
 
     public Boolean isDisplayed(By locator) {
         return find(locator).isDisplayed();
+    }
+
+    public Boolean waitFor(By locator, int timeout) {
+
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, timeout);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (org.openqa.selenium.TimeoutException exception) {
+            return false;
+        }
+
+        return true;
     }
 }

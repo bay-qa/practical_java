@@ -9,7 +9,6 @@ import static org.junit.Assert.assertTrue;
  * Created by idorovskikh on 8/25/16.
  */
 public class Login extends Base {
-    private WebDriver driver;
 
     By loginFormLocator = By.id("login");
 
